@@ -24,6 +24,6 @@ export class PokemonService {
   }
 
   deletePokemon(pokemon: Pokemon){
-    return deleteDoc(this.fireStore, `pokemos/${pokemon.id}`)
+    return deleteDoc(this.fireStore, `pokemon/${pokemon.id}`)
   }
 }

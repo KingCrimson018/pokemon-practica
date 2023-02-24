@@ -2,23 +2,23 @@
 <form>
  <div class="form-group">
     <div class="form-group col-md-6">
-      <label for="inputEmail4">ID</label>
-      <input type="text" class="form-control" id="inputEmail4" placeholder="Nombre">
+      <label for="pokemonId">ID</label>
+      <input type="text" class="form-control" id="inputEmail4" placeholder="ID">
     </div>
   </div>
   
   <div class="form-group">
-    <label for="inputAddress">Nombre</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Nombre de tu Pokemon">
+    <label for="pokemonNombre">Nombre</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Nombre de Pokemon">
   </div>
   <div class="form-group">
-    <label for="poderPokemon">Genero</label>
-    <input type="text" class="form-control" id="poderPokemon" placeholder="Nivel de poder">
+    <label for="PokemonGenero">Genero</label>
+    <input type="text" class="form-control" id="poderPokemon" placeholder="Genero">
   </div>
 
-  <div class="form-group">
+  <div class="pokemonElemento">
     <label for="PokemonElemento">Elemento</label>
-    <input type="text" class="form-control" id="poderPokemon" placeholder="Nivel de poder">
+    <input type="text" class="form-control" id="poderPokemon" placeholder="Elemento">
   </div>
 
 
@@ -57,51 +57,45 @@
               <td class="text-center">
                 <c-avatar
                   size="md"
-                  src="{{ user.avatar }}"
-                  status="{{ user.status }}"
+                  src=""
+                  status=""
                 ></c-avatar>
               </td>
               <td>
-                <div>{{ user.name }}</div>
+                <div></div>
                 <div class="small text-medium-emphasis text-nowrap">
                   <span>
-                    {{ user.state }} | Registered: {{ user.registered }}
+                  
                   </span>
                 </div>
               </td>
               <td class="text-center">
                 <svg
                   cIcon
-                  id="{{ user.country + user.name }}"
-                  name="cif{{ user.country }}"
+                  id=""
+                  name=""
                   size="xl"
-                  title="{{ user.country }}"
+                  title=""
                 ></svg>
               </td>
               <td>
                 <div class="d-flex justify-content-between">
                   <div class="float-start">
-                    <strong>{{ user.usage }}%</strong>
+                    <strong></strong>
                   </div>
                   <div class="float-end ms-1 text-nowrap">
                     <small class="text-medium-emphasis">
-                      {{ user.period }}
+                     
                     </small>
                   </div>
                 </div>
-                <c-progress thin>
-                  <c-progress-bar
-                    [value]="user.usage"
-                    color="{{ user.color }}"
-                  ></c-progress-bar>
-                </c-progress>
               </td>
               <td class="text-center">
-                <svg cIcon name="cibCc{{ user.payment }}" size="xl"></svg>
+               
               </td>
               <td>
-                <div class="small text-medium-emphasis">Last login</div>
-                <div class="fw-semibold text-nowrap">{{ user.activity }}</div>
+                <div class="small text-medium-emphasis"></div>
+                <div class="fw-semibold text-nowrap"></div>
               </td>
             </tr>
           </tbody>
