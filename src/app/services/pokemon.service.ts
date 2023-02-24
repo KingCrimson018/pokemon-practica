@@ -27,6 +27,10 @@ export class PokemonService {
 
    // return deleteDoc(this.fireStore, `pokemon/${pokemon.id}`)
 
-    return deleteDoc(doc(this.fireStore, `pokemos/${pokemon.id}`))
+    return deleteDoc(doc(this.fireStore, `pokemons/${pokemon.id}`)).then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err)
+    })
   }
 }

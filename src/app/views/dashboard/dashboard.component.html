@@ -17,11 +17,17 @@
   </div>
 
   <br>
+  <br>
+  <input type="submit" class="btn btn-primary" value="Add">
+</form>
 
-  <c-row>
+
+<br><br>
+
+<c-row>
   <c-col xs>
     <c-card class="mb-4">
-      <c-card-header>Users</c-card-header>
+      <c-card-header>Pokemones</c-card-header>
       <c-card-body>
         <table
           [hover]="true"
@@ -33,28 +39,18 @@
         >
           <thead cTableColor="light">
             <tr>
-              <th class="text-center">
-                <svg cIcon name="cilPeople"></svg>
-              </th>
               <th>Nombre</th>
               <th class="text-center">Genero</th>
               <th class="text-center">Elemento</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td class="text-center">
-                <c-avatar
-                  size=""
-                  src=""
-                  status=""
-                ></c-avatar>
-              </td>
+            <tr *ngFor="let pokemon of pokemons">
               <td>
                 <div></div>
                 <div class="small text-medium-emphasis text-nowrap">
                   <span>
-                    
+                    {{pokemon.nombre}}
                   </span>
                 </div>
               </td>
@@ -66,6 +62,7 @@
                   size="xl"
                   title=""
                 ></svg>
+                {{pokemon.genero}}
               </td>
               <td>
                 <div class="d-flex justify-content-between">
@@ -78,6 +75,7 @@
                     </small>
                   </div>
                 </div>
+                {{pokemon.elemento}}
               </td>
               <td class="text-center">
                 <svg cIcon name="" size="xl"></svg>
@@ -85,6 +83,7 @@
               <td>
                 <div class="small text-medium-emphasis"></div>
                 <div class="fw-semibold text-nowrap"></div>
+                <button (click)="deletePokemon(pokemon)" class="btn btn-danger">Eliminar</button>
               </td>
             </tr>
           </tbody>
@@ -93,14 +92,5 @@
     </c-card>
   </c-col>
 </c-row>
-
-
-
-  <br>
-  <input type="submit" class="btn btn-primary" value="Add">
-</form>
-
-<br><br>
-
 
 
