@@ -23,84 +23,9 @@
 
 
   <br>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-primary">Añadir</button>
 </form>
 
 <br><br>
 
-<c-row>
-  <c-col xs>
-    <c-card class="mb-4">
-      <c-card-header>Pokemon</c-card-header>
-      <c-card-body>
-        <table
-          [hover]="true"
-          [responsive]="true"
-          [striped]="true"
-          align="middle"
-          cTable
-          class="mb-0 border"
-        >
-          <thead cTableColor="light">
-            <tr>
-              <th class="text-center">
-                <svg cIcon name="cilPeople"></svg>
-              </th>
-              <th>Id</th>
-              <th class="text-center">Nombre</th>
-              <th>Genero</th>
-              <th class="text-center">Elemento</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let user of users; index as i">
-              <td class="text-center">
-                <c-avatar
-                  size="md"
-                  src=""
-                  status=""
-                ></c-avatar>
-              </td>
-              <td>
-                <div></div>
-                <div class="small text-medium-emphasis text-nowrap">
-                  <span>
-                  
-                  </span>
-                </div>
-              </td>
-              <td class="text-center">
-                <svg
-                  cIcon
-                  id=""
-                  name=""
-                  size="xl"
-                  title=""
-                ></svg>
-              </td>
-              <td>
-                <div class="d-flex justify-content-between">
-                  <div class="float-start">
-                    <strong></strong>
-                  </div>
-                  <div class="float-end ms-1 text-nowrap">
-                    <small class="text-medium-emphasis">
-                     
-                    </small>
-                  </div>
-                </div>
-              </td>
-              <td class="text-center">
-               
-              </td>
-              <td>
-                <div class="small text-medium-emphasis"></div>
-                <div class="fw-semibold text-nowrap"></div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </c-card-body>
-    </c-card>
-  </c-col>
-</c-row>
+
