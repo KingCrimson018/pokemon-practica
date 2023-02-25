@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {addDoc, collection, collectionData, Firestore} from "@angular/fire/firestore"
+import {addDoc, collection, collectionData, doc, Firestore} from "@angular/fire/firestore"
 import { deleteDoc } from '@firebase/firestore';
 import { Observable } from 'rxjs';
 import {Pokemon} from "src/app/models/pokemon"
@@ -24,6 +24,9 @@ export class PokemonService {
   }
 
   deletePokemon(pokemon: Pokemon){
-    return deleteDoc(this.fireStore, `pokemon/${pokemon.id}`)
+
+   // return deleteDoc(this.fireStore, `pokemon/${pokemon.id}`)
+
+    return deleteDoc(doc(this.fireStore, `pokemos/${pokemon.id}`))
   }
 }
