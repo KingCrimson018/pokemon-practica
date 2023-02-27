@@ -17,7 +17,7 @@ const routes: Routes = [
     path: '',
     component: DefaultLayoutComponent,
     data: {
-      title: 'Home'
+      title: 'Inicio'
     },
     children: [
       {
@@ -26,7 +26,7 @@ const routes: Routes = [
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule)
       },
       {
-        path: 'theme',
+        path: 'lucha',
         loadChildren: () =>
           import('./views/theme/theme.module').then((m) => m.ThemeModule)
       },

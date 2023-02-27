@@ -39,49 +39,24 @@
         >
           <thead cTableColor="light">
             <tr>
-              <th>Nombre</th>
+              <th class="text-center">Nombre</th>
               <th class="text-center">Genero</th>
               <th class="text-center">Elemento</th>
+              <th class="text-center">Acción</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let pokemon of pokemons">
-              <td>
-                <div></div>
-                <div class="small text-medium-emphasis text-nowrap">
-                  <span>
-                    {{pokemon.nombre }}
-                    
-                  </span>
-                </div>
+              <td class="text-center">
+                {{pokemon.nombre }}
               </td>
               <td class="text-center">
-                <svg
-                  cIcon
-                  id=""
-                  name=""
-                  size="xl"
-                  title=""
-                ></svg>
                 {{pokemon.genero}}
               </td>
-              <td>
-                <div class="d-flex justify-content-between">
-                  <div class="float-start">
-                    <strong></strong>
-                  </div>
-                  <div class="float-end ms-1 text-nowrap">
-                    <small class="text-medium-emphasis">
-                  
-                    </small>
-                  </div>
-                </div>
+              <td class="text-center">
                 {{pokemon.elemento}}
               </td>
               <td class="text-center">
-                <svg cIcon name="" size="xl"></svg>
-              </td>
-              <td>
                   <button class="btn btn-danger" (click)="deletePokemon(pokemon)">Eliminar</button>
               </td>
             </tr>
