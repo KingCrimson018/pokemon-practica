@@ -17,8 +17,14 @@
   </div>
 
   <br>
+  <br>
+  <input type="submit" class="btn btn-primary" value="Add">
+</form>
 
-  <c-row>
+<br><br>
+
+
+<c-row>
   <c-col xs>
     <c-card class="mb-4">
       <c-card-header>Users</c-card-header>
@@ -33,23 +39,13 @@
         >
           <thead cTableColor="light">
             <tr>
-              <th class="text-center">
-                <svg cIcon name="cilPeople"></svg>
-              </th>
               <th>Nombre</th>
               <th class="text-center">Genero</th>
               <th class="text-center">Elemento</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td class="text-center">
-                <c-avatar
-                  size=""
-                  src=""
-                  status=""
-                ></c-avatar>
-              </td>
+            <tr *ngFor="let pokemon of pokemons">
               <td>
                 <div></div>
                 <div class="small text-medium-emphasis text-nowrap">
@@ -67,6 +63,7 @@
                   size="xl"
                   title=""
                 ></svg>
+                {{pokemon.genero}}
               </td>
               <td>
                 <div class="d-flex justify-content-between">
@@ -85,8 +82,7 @@
                 <svg cIcon name="" size="xl"></svg>
               </td>
               <td>
-                <div class="small text-medium-emphasis"></div>
-                <div class="fw-semibold text-nowrap"></div>
+                  <button class="btn btn-danger" (click)="deletePokemon(pokemon)">Eliminar</button>
               </td>
             </tr>
           </tbody>
@@ -95,14 +91,3 @@
     </c-card>
   </c-col>
 </c-row>
-
-
-
-  <br>
-  <input type="submit" class="btn btn-primary" value="Add">
-</form>
-
-<br><br>
-
-
-
