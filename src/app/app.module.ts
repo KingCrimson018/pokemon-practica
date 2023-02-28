@@ -65,7 +65,7 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-    declarations: [AppComponent, ...APP_CONTAINERS, LucharComponent],
+    declarations: [AppComponent, ...APP_CONTAINERS],
     providers: [
         {
             provide: LocationStrategy,
