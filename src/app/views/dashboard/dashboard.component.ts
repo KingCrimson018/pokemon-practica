@@ -5,13 +5,14 @@ import {Pokemon} from 'src/app/models/pokemon'
 
 @Component({
   templateUrl: 'dashboard.component.html',
-  styleUrls: ['dashboard.component.scss']
+  styleUrls: ['dashboard.component.scss', 'stye.component.css']
 })
 export class DashboardComponent implements OnInit {
   pokemons:Pokemon[] = []
   nombre: String = ""
   genero: String = ""
   elemento: String = ""
+  poder: String = "" 
 
   constructor(private pokemonS: PokemonService) {
   }
@@ -24,6 +25,8 @@ export class DashboardComponent implements OnInit {
     pokemon.nombre = this.nombre
     pokemon.genero = this.genero
     pokemon.elemento = this.elemento
+    pokemon.elemento = this.poder
+   
     this.pokemonS.addPokemon(pokemon)
   }
   getPokemons(){

@@ -15,6 +15,11 @@ const routes: Routes = [
   },
   {
     path: '',
+    redirectTo: 'luchar',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
     component: DefaultLayoutComponent,
     data: {
       title: 'Inicio'
@@ -26,9 +31,9 @@ const routes: Routes = [
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule)
       },
       {
-        path: 'lucha',
+        path: 'luchar',
         loadChildren: () =>
-          import('./views/theme/theme.module').then((m) => m.ThemeModule)
+          import('./views/luchar/luchar.module').then((m) => m.LucharModule)
       },
       {
         path: 'base',

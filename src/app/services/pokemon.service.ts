@@ -20,7 +20,7 @@ export class PokemonService {
     var nombre = pokemon.nombre
     var genero = pokemon.genero
     var elemento = pokemon.elemento
-    return addDoc(collection(this.fireStore, "pokemons"), {id, nombre, genero, elemento} )
+    return addDoc(collection(this.fireStore, "pokemons"), {id, nombre, genero, elemento,} )
   }
 
   deletePokemon(pokemon: Pokemon){

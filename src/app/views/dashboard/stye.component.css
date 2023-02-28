@@ -1,0 +1,17 @@
+.form-control{
+    width: 50%;
+    height: 50px;
+}
+
+ button{
+    margin: 5px;
+    color: #fff;
+ }
+ #red:hover{
+    background: red;
+    color: #fff;
+ }
+ #green:hover{
+    background: green;
+    color: #fff;
+ }
