@@ -3,4 +3,5 @@ export class Pokemon  {
     nombre:String = ""
     genero:String = ""
     elemento:String = ""
+    puntosPoder:number=0
 }
