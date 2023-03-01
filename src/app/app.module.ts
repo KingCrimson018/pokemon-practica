@@ -52,6 +52,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { LucharComponent } from './views/luchar/luchar.component';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -107,7 +108,8 @@ const APP_CONTAINERS = [
         DocsComponentsModule,
         FormsModule,
         provideFirebaseApp(() => initializeApp(environment.firebase)),
-        provideFirestore(() => getFirestore())
+        provideFirestore(() => getFirestore()),
+        provideStorage(() => getStorage())
     ]
 })
 export class AppModule {
