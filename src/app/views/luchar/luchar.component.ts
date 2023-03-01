@@ -17,7 +17,7 @@ export class LucharComponent {
   pokemon2: Pokemon = new Pokemon()
   pokemonWinner: Pokemon = new Pokemon()
   ////////////////////////////////////////
-  name:String = ""
+
 
 
   constructor( private pokemonS:PokemonService){}
@@ -32,13 +32,17 @@ export class LucharComponent {
   }
   selectPokemon1(pokemon: Pokemon){
     this.pokemon1 = pokemon
+    this.pokemon2.puntosPoder *= 1
 
   }
   selectPokemon2(pokemon: Pokemon){
     this.pokemon2 = pokemon
+    this.pokemon2.puntosPoder *= 1
 
   }
   pokemonFight(){
+    
+    
     if(this.pokemon1.puntosPoder > this.pokemon2.puntosPoder){
       this.pokemonWinner = this.pokemon1
     }else{
