@@ -43,6 +43,7 @@ import {
   TabsModule,
   UtilitiesModule,
   
+  
 } from '@coreui/angular';
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
@@ -50,6 +51,7 @@ import { DocsComponentsModule } from "../components/docs-components.module";
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { LucharComponent } from './views/luchar/luchar.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -63,7 +65,7 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-    declarations: [AppComponent, ...APP_CONTAINERS],
+    declarations: [AppComponent, ...APP_CONTAINERS, LucharComponent],
     providers: [
         {
             provide: LocationStrategy,

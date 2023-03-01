@@ -1,6 +1,6 @@
  
 <form (submit)="addPokemon()">
-  <h1>El matias</h1>
+  <h1>P O K E M O N</h1>
   <div class="form-group">
     <label for="nombre">Nombres</label> {{nombre}}
     <input type="text" class="form-control" id="inputAddress" placeholder="Nombre de Pokemon" name="nombre" [(ngModel)]="nombre">
@@ -16,9 +16,14 @@
     <input type="text" class="form-control" id="poderPokemon" placeholder="Elemento" name="elemento" [(ngModel)]="elemento">
   </div>
 
+   <div class="pokemonElemento">
+    <label for="poder">Nivel de Poder</label>
+    <input type="text" class="form-control" id="poderPokemon" placeholder="Poder" name="poder" [(ngModel)]="elemento">
+  </div>
+
   <br>
   <br>
-  <input type="submit" class="btn btn-primary" value="Add">
+  <input class="submit" type="submit" class="btn btn-primary" value="Add Pokemon">
 </form>
 
 <br><br>
@@ -42,6 +47,7 @@
               <th class="text-center">Nombre</th>
               <th class="text-center">Genero</th>
               <th class="text-center">Elemento</th>
+              <th class="text-center">Poder</th>
               <th class="text-center">Acción</th>
             </tr>
           </thead>
@@ -56,9 +62,17 @@
               <td class="text-center">
                 {{pokemon.elemento}}
               </td>
+
               <td class="text-center">
-                  <button class="btn btn-danger" (click)="deletePokemon(pokemon)">Eliminar</button>
+
               </td>
+            
+              <td class="text-center">
+                  <button class="btn btn-danger" id="red"(click)="deletePokemon(pokemon)">Eliminar</button>
+
+                  <button class="btn btn btn-success" id="green" (click)="deletePokemon(pokemon)">Editar</button>
+              </td>
+    
             </tr>
           </tbody>
         </table>

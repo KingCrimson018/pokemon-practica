@@ -11,8 +11,8 @@ export const navItems: INavData[] = [
     }
   },
   {
-    name: 'Lucha',
-    url: '/lucha',
+    name: 'Luchar',
+    url: '/luchar',
     iconComponent: { name: 'cilFilterphoto' }
 
   // },
