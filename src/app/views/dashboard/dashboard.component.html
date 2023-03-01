@@ -24,7 +24,7 @@
         </div>
         <div class="PokemonImagen">
           <label for="imgUrl">Seleccione imagen</label>
-          <input type="file" accept=".jpg, .png" (change)="selectImage($event)" class="form-control" id="imgUrl" placeholder="imgUrl" name="imgUrl" >
+          <input type="file" accept=".jpg, .png" (change)="selectImage($event)" class="form-control" id="imgUrl" placeholder="imgUrl" name="imgUrl" bind-value="tempFileName" >
         </div>
       </div>
       <div class="col-4 m-3">

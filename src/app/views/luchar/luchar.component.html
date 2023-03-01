@@ -11,25 +11,36 @@
                 <th>Poder</th>
                </thead>
                <tbody>
-                <tr>
-                    <td></td>
+                <tr *ngFor="let pokemon of pokemons">
+                    <td>
+                        {{pokemon.nombre}}
+                    </td>
+                    <td>
+                        {{pokemon.elemento}}
+                    </td>
+                    <td>
+                        {{pokemon.puntosPoder}}Pts
+                    </td>
+                    <td>
+                        <button (click)="selectPokemon1(pokemon)" class="btn btn-primary">Seleccionar</button>
+                    </td>
                 </tr>
                 
             </tbody>
             </table>
 
             <h4>Detalles del Pokemon</h4>
-            <div class="form">
+            <div class="form d-flex flex-row">
                 <div class="col-7">
                     <label for="nombre">Nombre</label>
-                    <input type="text"class="form-control" readonly>
+                    <input type="text"class="form-control" readonly bind-value="pokemon1.nombre" >
                     <label for="elemento">Elemento</label>
-                    <input type="text" class="form-control" readonly>
+                    <input type="text" class="form-control" readonly bind-value="pokemon1.elemento">
                     <label for="poder">Poder</label>
-                    <input type="number" class="form-control" readonly>
+                    <input type="number" class="form-control" readonly bind-value="pokemon1.puntosPoder">
                 </div>
                 <div class="col-5">
-                    <img>
+                    <img [src]="pokemon1.imgUrl" alt="" class="img col-12 m-3">
                 </div>
             </div>
         </div>
@@ -41,47 +52,61 @@
                  <th>Nombre</th>
                  <th>Elemento</th>
                  <th>Poder</th>
+                 <th>Select</th>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td></td>
+                    <tr *ngFor="let pokemon of pokemons">
+                        <td>
+                            {{pokemon.nombre}}
+                        </td>
+                        <td>
+                            {{pokemon.elemento}}
+                        </td>
+                        <td>
+                            {{pokemon.puntosPoder}}Pts
+                        </td>
+                        <td>
+                            <button (click)="selectPokemon2(pokemon)" class="btn btn-primary">Seleccionar</button>
+                        </td>
                     </tr>
                     
                 </tbody>
              </table>
              <h4>Detalles del Pokemon</h4>
-             <div class="form">
+             <div class="form d-flex flex-row" >
                 <div class="col-7">
                     <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" readonly>
+                    <input type="text" class="form-control" readonly bind-value="pokemon2.nombre">
                     <label for="elemento">Elemento</label>
-                    <input type="text" class="form-control" readonly>
+                    <input type="text" class="form-control" readonly bind-value="pokemon2.elemento">
                     <label for="poder">Poder</label>
-                    <input type="number" class="form-control" readonly>
+                    <input type="number" class="form-control" readonly bind-value="pokemon2.puntosPoder">
                 </div>
                 <div class="col-5">
-                    <img>
+                    <img [src]="pokemon2.imgUrl" alt="" class="img col-12 m-3">
                 </div>
              </div>
         </div>
     </div>
+    <div class="row d-flex flex-row justify-content-between">
+        <button class="btn btn-success col-5 m-3" (click)="pokemonFight()">Luchar</button>
+        <button class="btn btn-primary col-5 m-3" (click)="newFight()">Nueva Pelea</button>
+    </div>  
     <div class="row">
-        <button class="btn btn-success">Luchar</button>
-    </div>
-    <div class="row">
-        <div class="form">
-            <br>
-            <h5>G A N A D O R</h5>
+        <div class="form d-flex flex-row">
+            
             <div class="col-7">
+                <br>
+                <h5>G A N A D O R</h5>
                 <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="form" readonly>
+                <input type="text" class="form-control" id="form" readonly bind-value="pokemonWinner.nombre">
                 <label for="nombre">Elemento</label>
-                <input type="text" class="form-control" id="form" readonly>
+                <input type="text" class="form-control" id="form" readonly bind-value="pokemonWinner.elemento">
                 <label for="nombre">Poder</label>
-                <input type="number" class="form-control" id="form" readonly>
+                <input type="number" class="form-control" id="form" readonly bind-value="pokemonWinner.puntosPoder">
             </div>
               <div class="col-5">
-                <img>
+                <img [src]="pokemonWinner.imgUrl" alt="" class="img col-12 m-3">
               </div>
         </div>
     </div>

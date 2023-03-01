@@ -32,7 +32,7 @@ export class DashboardComponent implements OnInit {
 
 /////////////////////////////---------------------------Control de Imagenes--------------------------------------/////////////////////////////////////////////////////////////////////
   selectImage($event: any){
-    if(this.imgUrl != null){
+    if(this.tempFileName != null){
       const imgRef = ref(this.st, `image/${this.tempFileName}`)
       deleteObject(imgRef)
     }
@@ -114,6 +114,7 @@ export class DashboardComponent implements OnInit {
     this.genero = ""
     this.elemento = ""
     this.puntosPoder = 0
+    this.tempFileName = ""
     this.imgUrl = ""
   }
   
