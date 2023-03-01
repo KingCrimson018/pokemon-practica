@@ -21,7 +21,8 @@ export class PokemonService {
     var genero = pokemon.genero
     var elemento = pokemon.elemento
     var puntosPoder = pokemon.puntosPoder
-    return addDoc(collection(this.fireStore, "pokemons"), {id, nombre, genero, elemento, puntosPoder} )
+    var imgUrl = pokemon.imgUrl
+    return addDoc(collection(this.fireStore, "pokemons"), {id, nombre, genero, elemento, puntosPoder, imgUrl} )
   }
   updatePokemon(pokemon: Pokemon){
     var id = pokemon.id
@@ -29,9 +30,10 @@ export class PokemonService {
     var genero = pokemon.genero
     var elemento = pokemon.elemento
     var puntosPoder = pokemon.puntosPoder
+    var imgUrl = pokemon.imgUrl
 
     console.log(id, nombre, genero, elemento, puntosPoder)
-    return setDoc(doc(this.fireStore, `pokemons/${pokemon.id}`), {id, nombre, genero, elemento, puntosPoder})
+    return setDoc(doc(this.fireStore, `pokemons/${pokemon.id}`), {id, nombre, genero, elemento, puntosPoder, imgUrl})
   }
   deletePokemon(pokemon: Pokemon){
 

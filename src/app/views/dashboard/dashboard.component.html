@@ -1,24 +1,35 @@
  {{editing}}
 <form (submit)="checkOption()">
   <h1>P O K E M O N</h1>
-  <div class="form-group">
-    <label for="nombre">Nombres</label> {{nombre}}
-    <input type="text" class="form-control" id="inputAddress" placeholder="Nombre de Pokemon" name="nombre"  bind-value="nombre" [(ngModel)]="nombre">
+  <div class="d-flex flex-row ">
+      <div class="col-6 " >
+        <div class="form-group">
+          <label for="nombre">Nombres</label> {{nombre}}
+          <input type="text" class="form-control" id="inputAddress" placeholder="Nombre de Pokemon" name="nombre"  bind-value="nombre" [(ngModel)]="nombre">
+          
+        </div>
+        <div class="form-group">
+          <label for="genero">Genero</label>
+          <input type="text" class="form-control" id="poderPokemon" placeholder="Genero" name="genero" bind-value="genero" [(ngModel)]="genero">
+        </div>
     
-  </div>
-  <div class="form-group">
-    <label for="genero">Genero</label>
-    <input type="text" class="form-control" id="poderPokemon" placeholder="Genero" name="genero" bind-value="genero" [(ngModel)]="genero">
-  </div>
-
-  <div class="pokemonElemento">
-    <label for="elemento">Elemento</label>
-    <input type="text" class="form-control" id="poderPokemon" placeholder="Elemento" name="elemento" bind-value="elemento" [(ngModel)]="elemento">
-  </div>
-
-   <div class="pokemonElemento">
-    <label for="puntosPoder">Nivel de Poder</label>
-    <input type="text" class="form-control" id="poderPokemon" placeholder="puntosPoder" name="puntosPoder" bind-value="puntosPoder" [(ngModel)]="puntosPoder">
+        <div class="pokemonElemento">
+          <label for="elemento">Elemento</label>
+          <input type="text" class="form-control" id="poderPokemon" placeholder="Elemento" name="elemento" bind-value="elemento" [(ngModel)]="elemento">
+        </div>
+    
+        <div class="pokemonPoder">
+          <label for="puntosPoder">Nivel de Poder</label>
+          <input type="text" class="form-control" id="poderPokemon" placeholder="puntosPoder" name="puntosPoder" bind-value="puntosPoder" [(ngModel)]="puntosPoder">
+        </div>
+        <div class="PokemonImagen">
+          <label for="imgUrl">Seleccione imagen</label>
+          <input type="file" accept=".jpg, .png" (change)="selectImage($event)" class="form-control" id="imgUrl" placeholder="imgUrl" name="imgUrl" >
+        </div>
+      </div>
+      <div class="col-4 m-3">
+        <img [src]="imgUrl" alt="" class="col-12 rounded">
+      </div>
   </div>
 
   <br>
@@ -81,3 +92,6 @@
     </c-card>
   </c-col>
 </c-row>
+
+
+<br><br><br>
